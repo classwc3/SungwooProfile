@@ -1,547 +1,68 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="성우의 포트폴리오입니다.">
-    <meta name="naver-site-verification" content="041cc6e1af75b7f6cf9e6042668ffa549c8d2c9b" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <meta property="og:type" content="website"> 
-    <meta property="og:title" content="조성우">
-    <meta property="og:description" content="용인백현중 1학년 6반 조성우입니다. 조성우의 개인 포트폴리오. 조성우">
-    <meta property="og:image" content="https://xn--oj4bo4hmqb.kro.kr/profile (2).jpg">
-    <meta property="og:url" content="조성우.kro.kr">
-    
-    <link rel="icon" href="https://xn--oj4bo4hmqb.kro.kr/profile (2).jpg">
-    <link rel="shortcut icon" href="https://xn--oj4bo4hmqb.kro.kr/profile (2).jpg">
+  <title>조성우 · Profile</title>
+  <meta name="description" content="조성우의 개인 프로필입니다.">
+  <link rel="canonical" href="https://조성우.kro.kr/">
 
-    <script type="application/ld+json">
-    {
-      "@type": "WebSite",
-      "name": "조성우",
-      "url": "https://조성우.kro.kr/"
-    }
-    </script>
-    
-    <title>조성우</title>
+  <!-- SEO / 공유 미리보기 -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://조성우.kro.kr/">
+  <meta property="og:title" content="조성우 · Profile">
+  <meta property="og:description" content="조성우의 개인 프로필입니다.">
+  <meta property="og:image" content="https://lh3.googleusercontent.com/d/1AFtKdzVmuyZdTx7b8t7jBtyp51TLeQoB=w1200">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#2563EB">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
-        
-        * {
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-        
-        body {
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        
-        .gov-gradient {
-            background: linear-gradient(135deg, #0052A4 0%, #003d7a 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .gov-gradient::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            top: -50%;
-            left: -50%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: move-bg 20s linear infinite;
-        }
-        
-        @keyframes move-bg {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-        
-        .gov-card {
-            background: white;
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .gov-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 82, 164, 0.1), transparent);
-            transition: left 0.6s ease;
-        }
-        
-        .gov-card:hover::before {
-            left: 100%;
-        }
-        
-        .gov-card:hover {
-            box-shadow: 0 10px 30px rgba(0, 82, 164, 0.2);
-            transform: translateY(-8px);
-        }
-        
-        .dark .gov-card {
-            background: #1f2937;
-            border-color: #374151;
-        }
-        
-        .scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #0052A4, #003d7a);
-            z-index: 9999;
-            transition: width 0.1s ease;
-            box-shadow: 0 2px 10px rgba(0, 82, 164, 0.5);
-        }
-        
-        .fade-in {
-            opacity: 0;
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .dark {
-            background-color: #111827;
-            color: #f9fafb;
-        }
-        
-        .section-title {
-            position: relative;
-            padding-bottom: 16px;
-            margin-bottom: 40px;
-            animation: fadeInUp 0.6s ease forwards;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, #0052A4, transparent);
-            border-radius: 2px;
-        }
-        
-        .nav-link {
-            position: relative;
-            padding-bottom: 4px;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: #0052A4;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .timeline-line {
-            position: relative;
-        }
-        
-        .timeline-line::before {
-            content: '';
-            position: absolute;
-            left: 15px;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: linear-gradient(180deg, #0052A4, #003d7a);
-            border-radius: 2px;
-        }
-        
-        .dark .timeline-line::before {
-            background: linear-gradient(180deg, #0052A4, #003d7a);
-        }
-        
-        .timeline-dot {
-            position: absolute;
-            left: 7px;
-            top: 8px;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            background: #0052A4;
-            border: 4px solid white;
-            box-shadow: 0 0 0 4px rgba(0, 82, 164, 0.2);
-            animation: pulse-dot 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse-dot {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-        
-        .dark .timeline-dot {
-            border-color: #111827;
-        }
-        
-        .dday-badge {
-            background: linear-gradient(135deg, #0052A4, #003d7a);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .dday-badge::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
-            animation: rotate-glow 10s linear infinite;
-        }
-        
-        @keyframes rotate-glow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        .celebration-card {
-            animation: pulse-celebration 1.5s ease-in-out infinite;
-        }
-        
-        @keyframes pulse-celebration {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(0, 82, 164, 0.3); }
-            50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(0, 82, 164, 0.6); }
-        }
+  <link rel="icon" href="https://lh3.googleusercontent.com/d/1AFtKdzVmuyZdTx7b8t7jBtyp51TLeQoB=w128">
 
-        .dday-item {
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .timeline-item {
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .dday-item:nth-child(1) { animation-delay: 0s; }
-        .dday-item:nth-child(2) { animation-delay: 0.15s; }
-        .dday-item:nth-child(3) { animation-delay: 0.3s; }
-        .dday-item:nth-child(4) { animation-delay: 0.45s; }
-
-        .timeline-item:nth-child(1) { animation-delay: 0s; }
-        .timeline-item:nth-child(2) { animation-delay: 0.1s; }
-        .timeline-item:nth-child(3) { animation-delay: 0.2s; }
-        .timeline-item:nth-child(4) { animation-delay: 0.3s; }
-        .timeline-item:nth-child(5) { animation-delay: 0.4s; }
-        .timeline-item:nth-child(6) { animation-delay: 0.5s; }
-        .timeline-item:nth-child(7) { animation-delay: 0.6s; }
-        
-        .profile-container {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-        }
-        
-        .profile-image {
-            transition: all 0.4s ease;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .profile-image:hover {
-            transform: scale(1.05) rotate(3deg);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-        }
-        
-        .icon-bounce {
-            transition: all 0.3s ease;
-        }
-        
-        .icon-bounce:hover {
-            transform: scale(1.1) rotate(5deg);
-        }
-        
-        nav {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.95);
-        }
-        
-        .dark nav {
-            background: rgba(17, 24, 39, 0.95);
-        }
-        
-        .badge-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .badge-hover:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
-        }
-    </style>
+  <style>
+    html,body{ margin:0; padding:0; height:100%; overflow:hidden; background:#EFF6FF; }
+    #boot{ position:fixed; inset:0; display:flex; flex-direction:column; gap:18px;
+      align-items:center; justify-content:center; background:#EFF6FF; z-index:3;
+      transition:opacity .4s; font-family:system-ui,-apple-system,sans-serif; }
+    #boot .sp{ width:40px; height:40px; border:3px solid #DBEAFE; border-top-color:#2563EB;
+      border-radius:50%; animation:s .8s linear infinite; }
+    #boot .msg{ color:#64748b; font-size:.85rem; display:none; text-align:center; padding:0 24px; }
+    #boot .msg a{ color:#2563EB; font-weight:600; }
+    @keyframes s{ to{ transform:rotate(360deg); } }
+    iframe{ position:fixed; inset:0; width:100%; height:100%; border:0; z-index:2; background:#fff; }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900 transition-colors duration-300">
-    <div class="scroll-progress" id="scrollProgress"></div>
-    
-    <nav class="fixed top-0 left-0 right-0 z-50 shadow-sm border-b border-gray-200 dark:border-gray-800">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-xl font-bold text-blue-900 dark:text-blue-400">
-                조성우
-            </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-900 dark:hover:text-blue-400 transition">홈</a>
-                <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-900 dark:hover:text-blue-400 transition">소개</a>
-                <a href="#dday" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-900 dark:hover:text-blue-400 transition">디데이</a>
-                <a href="#timeline" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-900 dark:hover:text-blue-400 transition">이력</a>
-                <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-900 dark:hover:text-blue-400 transition">연락처</a>
-            </div>
-            <div class="flex items-center space-x-2">
-                <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
-                    <i class="fas fa-moon text-xl text-gray-700 dark:text-gray-300"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-    
-    <section id="home" class="min-h-screen flex items-center justify-center gov-gradient relative overflow-hidden pt-20">
-        <div class="container mx-auto px-4 text-center text-white z-10">
-            <div class="mb-8 profile-container">
-                <div class="w-40 h-40 mx-auto rounded-full border-4 border-white shadow-xl overflow-hidden bg-gradient-to-br from-blue-300 to-blue-500 flex items-center justify-center profile-image">
-                    <img src="https://xn--oj4bo4hmqb.kro.kr/profile (2).jpg" alt="prof" class="w-full h-full object-cover">
-                </div>
-            </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-4 fade-in">조성우</h1>
-            <p class="text-xl md:text-2xl mb-4 fade-in" style="animation-delay: 0.2s;">하하하하핫</p>
-            <div class="flex flex-wrap justify-center gap-4 mt-8">
-                <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-lg badge-hover fade-in" style="animation-delay: 0.3s;">
-                    <i class="fas fa-map-marker-alt mr-2"></i>대한민국 경기도 용인시
-                </span>
-                <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-lg badge-hover fade-in" style="animation-delay: 0.4s;">
-                    <i class="fas fa-birthday-cake mr-2"></i><span id="ageDisplay">12</span>세
-                </span>
-            </div>
-        </div>
-    </section>
-    
-    <section id="about" class="py-20 bg-white dark:bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold section-title">자기소개</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="gov-card rounded-lg p-6 fade-in">
-                    <div class="flex items-center mb-3">
-                        <i class="fas fa-heart text-3xl text-red-500 mr-3 icon-bounce"></i>
-                        <h3 class="text-xl font-bold">취미</h3>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-400">프로그래밍, 수영</p>
-                </div>
-                <div class="gov-card rounded-lg p-6 fade-in" style="animation-delay: 0.15s;">
-                    <div class="flex items-center mb-3">
-                        <i class="fas fa-star text-3xl text-yellow-500 mr-3 icon-bounce"></i>
-                        <h3 class="text-xl font-bold">특기</h3>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-400">Python, Unity</p>
-                </div>
-                <div class="gov-card rounded-lg p-6 fade-in" style="animation-delay: 0.3s;">
-                    <div class="flex items-center mb-3">
-                        <i class="fas fa-school text-3xl text-blue-500 mr-3 icon-bounce"></i>
-                        <h3 class="text-xl font-bold">학교</h3>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-400">용인백현중학교 1학년</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="dday" class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold section-title">디데이</h2>
-            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto" id="ddayContainer">
-            </div>
-        </div>
-    </section>
-    
-    <section id="timeline" class="py-20 bg-white dark:bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold section-title">이력</h2>
-            <div class="max-w-3xl mx-auto">
-                <div class="timeline-line pl-12 space-y-6" id="timelineContainer">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold section-title">연락처</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
-                <a href="mailto:sungwoo@sungwoocho.kro.kr" 
-                   class="gov-card rounded-lg p-5 flex items-center space-x-4 hover:shadow-lg transition fade-in">
-                    <i class="fas fa-envelope text-3xl text-red-500 icon-bounce"></i>
-                    <div>
-                        <div class="font-bold">메일</div>
-                        <div class="text-sm text-gray-600 dark:text-gray-400">sungwoo@sungwoocho.kro.kr</div>
-                    </div>
-                </a>
-                <a href="tel:010-89**-****" 
-                   class="gov-card rounded-lg p-5 flex items-center space-x-4 hover:shadow-lg transition fade-in" style="animation-delay: 0.1s;">
-                    <i class="fas fa-phone text-3xl text-green-500 icon-bounce"></i>
-                    <div>
-                        <div class="font-bold">전화</div>
-                        <div class="text-sm text-gray-600 dark:text-gray-400">010-89**-****</div>
-                    </div>
-                </a>
-                <a href="https://github.com/classwc3" target="_blank"
-                   class="gov-card rounded-lg p-5 flex items-center space-x-4 hover:shadow-lg transition fade-in" style="animation-delay: 0.2s;">
-                    <i class="fab fa-github text-3xl text-gray-800 dark:text-white icon-bounce"></i>
-                    <div>
-                        <div class="font-bold">GitHub</div>
-                        <div class="text-sm text-gray-600 dark:text-gray-400">프로젝트</div>
-                    </div>
-                </a>
-                <a href="https://discord.gg/f8Mv8wz6" target="_blank"
-                   class="gov-card rounded-lg p-5 flex items-center space-x-4 hover:shadow-lg transition fade-in" style="animation-delay: 0.3s;">
-                    <i class="fab fa-discord text-3xl text-indigo-500 icon-bounce"></i>
-                    <div>
-                        <div class="font-bold">Discord</div>
-                        <div class="text-sm text-gray-600 dark:text-gray-400">@classwc3</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <footer class="py-8 bg-gray-900 text-white text-center">
-        <p class="text-sm">© 2026 조성우. All rights reserved.</p>
-    </footer>
-    
-    <script>
-        // 다크모드
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const html = document.documentElement;
-        
-        if (localStorage.getItem('darkMode') === 'true') {
-            html.classList.add('dark');
-        }
-        
-        darkModeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            localStorage.setItem('darkMode', html.classList.contains('dark'));
-        });
-        
-        // 스크롤 프로그레스
-        window.addEventListener('scroll', () => {
-            const scrollProgress = document.getElementById('scrollProgress');
-            const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            scrollProgress.style.width = scrollPercentage + '%';
-        });
-        
-        // 나이 계산
-        function calculateAge(birthDate) {
-            const today = new Date();
-            const birth = new Date(birthDate);
-            let age = today.getFullYear() - birth.getFullYear();
-            const monthDiff = today.getMonth() - birth.getMonth();
-            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
-                age--;
-            }
-            return age;
-        }
-        
-        // D-DAY 계산
-        function calculateDday(targetDate) {
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
-            const target = new Date(targetDate);
-            target.setHours(0, 0, 0, 0);
-            const diff = Math.floor((target - today) / (1000 * 60 * 60 * 24));
-            
-            if (diff === 0) return { text: 'D-DAY!!!', isToday: true };
-            if (diff < 0) return { text: `D+${Math.abs(diff)}`, isToday: false };
-            return { text: `D-${diff}`, isToday: false };
-        }
-        
-        // 데이터
-        const ddayData = [
-            { title: '코딩', target_date: '2025-02-18', description: '코딩 시작' },
-            { title: '태어난지', target_date: '2013-03-13', description: '태어난지' },
-            { title: '생일', target_date: '2026-03-13', description: '13살 되는날' }
-        ];
-        
-        const timelineData = [
-            { year: '2013.03', event: '출생' },
-            { year: '2020.09', event: 'Sindlinger Wiesen 초등학교 입학' },
-            { year: '2022.03', event: '운양초등학교 전학' },
-            { year: '2022.06', event: '중일초등학교 전학' },
-            { year: '2025.02', event: '파이썬 시작' },
-            { year: '2025.10', event: '유니티 시작' },
-            { year: '2025.12', event: '중일초등학교 졸업' },
-            { year: '2026.03', event: '용인백현중학교 입학' },
-            { year: '2026.03', event: '경기도교육청미래과학교육원부설영재교육원 입학' },
-            { year: '2026.04', event: '하드코딩!!!' }
-        ];
-        
-        // D-DAY 렌더링
-        const ddayContainer = document.getElementById('ddayContainer');
-        ddayData.forEach((item, idx) => {
-            const dday = calculateDday(item.target_date);
-            const celebration = dday.isToday ? 'celebration-card' : '';
-            const ddayHtml = `
-                <div class="gov-card rounded-lg p-6 text-center dday-item ${celebration}">
-                    <div class="dday-badge text-white rounded-lg p-4 mb-4">
-                        <div class="text-4xl font-bold mb-1">${dday.text}</div>
-                        <div class="text-sm opacity-90">${item.target_date}</div>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">${item.title}</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">${item.description}</p>
-                </div>
-            `;
-            ddayContainer.innerHTML += ddayHtml;
-        });
-        
-        // 타임라인 렌더링
-        const timelineContainer = document.getElementById('timelineContainer');
-        timelineData.forEach((item, idx) => {
-            const timelineHtml = `
-                <div class="relative timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="gov-card rounded-lg p-5">
-                        <div class="font-bold text-blue-900 dark:text-blue-400 mb-1">${item.year}</div>
-                        <div class="text-gray-700 dark:text-gray-300">${item.event}</div>
-                    </div>
-                </div>
-            `;
-            timelineContainer.innerHTML += timelineHtml;
-        });
-        
-        // 나이 표시
-        document.getElementById('ageDisplay').textContent = calculateAge('2013-03-13');
-    </script>
+<body>
+  <div id="boot">
+    <div class="sp"></div>
+    <div class="msg" id="bootMsg">
+      로딩이 오래 걸리나요?<br>
+      <a id="directLink" href="#" target="_blank">여기를 눌러 새 창에서 열기</a>
+    </div>
+  </div>
+
+  <!-- ▼▼▼ 본인의 GAS 웹앱 배포 URL (…/exec 로 끝나는 주소) ▼▼▼ -->
+  <iframe
+    id="site"
+    src="https://script.google.com/macros/s/AKfycbznNEcWjQkN87w7AujuCfwTHNmXgmdzvIYE4SEOowjJ6cUseBlUNnek-mfrDCDYHDpL/exec"
+    title="Profile"
+    allow="clipboard-write; clipboard-read"
+    loading="eager"></iframe>
+  <!-- ▲▲▲ ▲▲▲ -->
+
+  <script>
+    var iframe = document.getElementById('site');
+    var boot = document.getElementById('boot');
+    var loaded = false;
+    document.getElementById('directLink').href = iframe.src;
+    iframe.addEventListener('load', function(){
+      loaded = true;
+      boot.style.opacity = '0';
+      setTimeout(function(){ if(boot) boot.remove(); }, 400);
+    });
+    setTimeout(function(){
+      if(!loaded){ document.getElementById('bootMsg').style.display = 'block'; }
+    }, 6000);
+  </script>
 </body>
 </html>
